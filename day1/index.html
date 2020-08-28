@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+
+    <!-- Fallbacks for CSS variables -->
+    <script>
+      window.MSInputMethodContext &&
+        document.documentMode &&
+        document.write(
+          '<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\x2fscript>'
+        );
+    </script>
+
+    <title>Home page</title>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo_container">
+          <img src="" alt="Logo" />
+        </div>
+        <nav>
+          <ul>
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+            <li><a href="#">Link 4</a></li>
+            <li><a href="#sign_in">Sign In</a></li>
+            <li><a href="#sign_up">Sign Up</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="modals_container">
+        <div id="sign_up" class="modal_container">
+          <section>
+            <img src="./images/registration_bg.svg" alt="Sign up image" />
+
+            <h3>Sign Up</h3>
+
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem
+              dolorum quibusdam iure delectus excepturi sint ullam dolorem quas
+              officia consequatur eligendi placeat, error fugit magni modi
+              veritatis consectetur. Veniam, quia!
+            </p>
+          </section>
+
+          <div class="form_container">
+            <div class="close_btn">
+              <a href="#" id="close">
+                <i>close</i>
+              </a>
+            </div>
+            <h2>Sign Up to <span class="site_name">Stormie's Site</span></h2>
+            <div class="social_media_accounts sign_up_option1">
+              <ul>
+                <li>
+                  <a href="#"><i>Facebook</i></a>
+                </li>
+                <li>
+                  <a href="#"><i>Twitter</i></a>
+                </li>
+                <li>
+                  <a href="#"><i>Instagram</i></a>
+                </li>
+                <li>
+                  <a href="#"><i>Github</i></a>
+                </li>
+              </ul>
+            </div>
+            <div class="alternative_text">
+              Or
+            </div>
+            <div class="sign_up_option2">
+              <a href="#details">Fill In a form with details</a>
+              <!-- A little annimation like a new door open -->
+            </div>
+            <form action="#">
+              <fieldset id="details">
+                <!-- TO DO: INCLUDE WITH PSEUDO ELEMENTS -->
+                <!-- <div>
+                  1/3  
+                </div> -->
+                <legend>Please Fill in with your details</legend>
+
+                <input
+                  type="text"
+                  placeholder="First name"
+                  aria-label="Last name"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="Last name"
+                  aria-label="Last name"
+                  required
+                />
+
+                <input
+                  type="email"
+                  placeholder="Your Email"
+                  aria-label="Your Email"
+                  required
+                />
+
+                <input
+                  type="number"
+                  placeholder="Your Telephone"
+                  aria-label="Your Telephone"
+                  required
+                />
+                <input
+                  type="number"
+                  placeholder="Your age"
+                  aria-label="Your Age"
+                  required
+                />
+                <input type="radio" name="gender" id="male" />\
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" />\
+                <label for="female">Female</label>
+
+                <!-- <div class="step_move">
+                  <a href="#step2">
+                    Forward
+                  </a>
+                </div> -->
+              </fieldset>
+              <fieldset id="step2">
+                <!-- TO DO: INCLUDE WITH PSEUDO ELEMENTS -->
+                <!-- <div>
+                  2/3
+                </div> -->
+                <legend>Please Fill in with additional info</legend>
+
+                <input
+                  type="text"
+                  placeholder="Address"
+                  aria-label="Address"
+                  required
+                />
+                <input
+                  type="text"
+                  placeholder="City"
+                  aria-label="City"
+                  required
+                />
+
+                <input
+                  type="text"
+                  placeholder="Zip code"
+                  aria-label="Zip code"
+                  required
+                />
+
+                <select name="country" aria-label="Select your country">
+                  <option value="">Select your country </option>
+                  <option value="Europe">Europe</option>
+                  <option value="Asia">Asia</option>
+                  <option value="America">America</option>
+                  <option value="Africa">Africa</option>
+                </select>
+
+                <!-- <div class="step_move">
+                  <a href="#step1">
+                    Backward
+                  </a>
+                  <a href="#step3">
+                    Forward
+                  </a>
+                </div> -->
+              </fieldset>
+              <fieldset id="step3">
+                <!-- TO DO: INCLUDE WITH PSEUDO ELEMENTS -->
+                <!-- <div>
+                  3/3
+                </div> -->
+                <legend>Credentials</legend>
+
+                <input
+                  type="text"
+                  placeholder="Username"
+                  aria-label="Username"
+                  required
+                />
+                <input
+                  type="password"
+                  placeholder="Password"
+                  aria-label="Password"
+                  required
+                />
+
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  aria-label="Confirm Password"
+                  required
+                />
+
+                <input type="radio" id="terms_conditions" />
+                <label for="terms_conditions"
+                  >Creating an account means you’re okay with our
+                  <a href="#">
+                    Terms of Service, Privacy Policy
+                  </a>
+                  , and our default
+                  <a href="#">
+                    Notification Settings
+                  </a>
+                  .
+                </label>
+              </fieldset>
+              <div class="form_footer">
+                <div>
+                  <span>Already a member? <a href="#">Sign In</a></span> |
+                  <span
+                    >Sign up with
+                    <a href="#"> <i>Facebook</i></a>
+                    <a href="#"> <i>Twitter</i></a>
+                    <a href="#"> <i>Instagram</i></a>
+                    <a href="#"> <i>GitHub</i></a>
+                  </span>
+                </div>
+                <div class="step_move">
+                  <a href="#step2">
+                    Backward
+                  </a>
+                  <button type="submit">
+                    Create Account
+                    <!-- A little checked or feast icon -->
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <main>
+        <img src="" alt="Illustrative Image" />
+        <div class="purpose_1">
+          <h1>Daily UI challenge day 1</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
+            quasi sapiente! Repellendus odit animi voluptatibus porro,
+            reprehenderit vel dicta vitae error modi fuga recusandae reiciendis
+            earum beatae corrupti. Nesciunt, quidem.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
+            nam?
+          </p>
+        </div>
+      </main>
+      <footer>
+        A Challenge from DailyUI by StormieGal | &copy; 2020
+      </footer>
+    </div>
+
+    <script src="./scripts/index.js"></script>
+  </body>
+</html>

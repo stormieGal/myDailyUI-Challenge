@@ -1,0 +1,56 @@
+/* Best practice */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Initialization */
+:root {
+}
+
+/* Default state */
+.modals_container {
+  /* visibility: hidden;  */ /* The space is still occupy */
+
+  display: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* HEADERS */
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+/*========================= 
+* FORM 
+===========================
+*/
+
+.modal_container {
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal_container > * {
+  padding: 15px;
+}
+
+.modals_container img:first-of-type {
+  height: 50px;
+  width: 50px;
+}
