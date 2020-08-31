@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/index.css" />
 
@@ -22,19 +27,7 @@
   <body>
     <div class="container">
       <header>
-        <div class="logo_container">
-          <img src="" alt="Logo" />
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-            <li><a href="#sign_in">Sign In</a></li>
-            <li><a href="#sign_up">Sign Up</a></li>
-          </ul>
-        </nav>
+        <h1>Daily UI Challenge 1: Sign Up</h1>
       </header>
 
       <div class="modals_container">
@@ -55,77 +48,114 @@
           <div class="form_container">
             <div class="close_btn">
               <a href="#" id="close">
-                <i>close</i>
+                <img src="./images/x.svg" alt="close" />
               </a>
             </div>
-            <h2>Sign Up to <span class="site_name">Stormie's Site</span></h2>
-            <div class="social_media_accounts sign_up_option1">
+            <h2 class="present_choice">
+              Sign Up to <span class="site_initial">S</span>tormie<span
+                class="site_initial"
+                >W</span
+              >orld.
+            </h2>
+            <div class="social_media_accounts sign_up_option1 present_choice">
               <ul>
                 <li>
-                  <a href="#"><i>Facebook</i></a>
+                  <a href="#"
+                    ><img
+                      src="./images/facebook.svg"
+                      alt="Sign up with your Facebook account"
+                  /></a>
                 </li>
                 <li>
-                  <a href="#"><i>Twitter</i></a>
+                  <a href="#"
+                    ><img
+                      src="./images/twitter.svg"
+                      alt="Sign up with twitter account"
+                  /></a>
                 </li>
                 <li>
-                  <a href="#"><i>Instagram</i></a>
+                  <a href="#"
+                    ><img
+                      src="./images/instagram.svg"
+                      alt="Sign up with Instagram account"
+                  /></a>
                 </li>
                 <li>
-                  <a href="#"><i>Github</i></a>
+                  <a href="#"
+                    ><img
+                      src="./images/github.svg"
+                      alt="Sign up with GitHub account"
+                  /></a>
                 </li>
               </ul>
             </div>
-            <div class="alternative_text">
+            <div class="alternative_text present_choice">
               Or
             </div>
-            <div class="sign_up_option2">
+            <div class="sign_up_option2 present_choice">
               <a href="#details">Fill In a form with details</a>
-              <!-- A little annimation like a new door open -->
+              <!-- 
+                * TO DO: A little animation like a new door open -->
             </div>
             <form action="#">
-              <fieldset id="details">
+              <fieldset id="details" data-pagination="1/3">
                 <!-- TO DO: INCLUDE WITH PSEUDO ELEMENTS -->
                 <!-- <div>
                   1/3  
                 </div> -->
-                <legend>Please Fill in with your details</legend>
+                <legend class="header2">
+                  Please Fill in with your details
+                </legend>
 
-                <input
-                  type="text"
-                  placeholder="First name"
-                  aria-label="Last name"
-                  required
-                />
-                <input
-                  type="text"
-                  placeholder="Last name"
-                  aria-label="Last name"
-                  required
-                />
+                <div class="row">
+                  <input
+                    type="text"
+                    placeholder="First name"
+                    aria-label="Last name"
+                    required
+                  />
+                  <input
+                    type="text"
+                    placeholder="Last name"
+                    aria-label="Last name"
+                    required
+                  />
+                </div>
 
-                <input
-                  type="email"
-                  placeholder="Your Email"
-                  aria-label="Your Email"
-                  required
-                />
+                <div class="row">
+                  <input
+                    type="email"
+                    placeholder="Your Email"
+                    aria-label="Your Email"
+                    required
+                  />
 
-                <input
-                  type="number"
-                  placeholder="Your Telephone"
-                  aria-label="Your Telephone"
-                  required
-                />
-                <input
-                  type="number"
-                  placeholder="Your age"
-                  aria-label="Your Age"
-                  required
-                />
-                <input type="radio" name="gender" id="male" />\
-                <label for="male">Male</label>
-                <input type="radio" name="gender" id="female" />\
-                <label for="female">Female</label>
+                  <input
+                    type="number"
+                    placeholder="Your Telephone"
+                    aria-label="Your Telephone"
+                    required
+                  />
+                </div>
+
+                <div class="row">
+                  <input
+                    type="number"
+                    placeholder="Your age"
+                    aria-label="Your Age"
+                    required
+                  />
+                  <div class="an_input">
+                    <div class="gender">
+                      <input type="radio" name="gender" id="male" />
+                      <label for="male">Male</label>
+                    </div>
+                    <div class="gender">
+                      <input type="radio" name="gender" id="female" />
+                      <label for="female">Female</label>
+                    </div>
+                  </div>
+                </div>
 
                 <!-- <div class="step_move">
                   <a href="#step2">
@@ -133,12 +163,15 @@
                   </a>
                 </div> -->
               </fieldset>
-              <fieldset id="step2">
+
+              <fieldset id="step2" data-pagination="2/3">
                 <!-- TO DO: INCLUDE WITH PSEUDO ELEMENTS -->
                 <!-- <div>
                   2/3
                 </div> -->
-                <legend>Please Fill in with additional info</legend>
+                <legend class="header2">
+                  Please Fill in with additional info
+                </legend>
 
                 <input
                   type="text"
@@ -177,12 +210,12 @@
                   </a>
                 </div> -->
               </fieldset>
-              <fieldset id="step3">
+              <fieldset id="step3" data-pagination="3/3">
                 <!-- TO DO: INCLUDE WITH PSEUDO ELEMENTS -->
                 <!-- <div>
                   3/3
                 </div> -->
-                <legend>Credentials</legend>
+                <legend class="header2">Credentials</legend>
 
                 <input
                   type="text"
@@ -219,18 +252,34 @@
               </fieldset>
               <div class="form_footer">
                 <div>
-                  <span>Already a member? <a href="#">Sign In</a></span> |
-                  <span
-                    >Sign up with
-                    <a href="#"> <i>Facebook</i></a>
-                    <a href="#"> <i>Twitter</i></a>
-                    <a href="#"> <i>Instagram</i></a>
-                    <a href="#"> <i>GitHub</i></a>
+                  <span>Already a member? <a href="#">Sign In</a></span
+                  ><br /><span
+                    >Or Sign up with
+
+                    <a href="#"
+                      ><img
+                        src="./images/facebook.svg"
+                        alt="Sign up with Twitter"
+                    /></a>
+                    <a href="#">
+                      <img src="./images/twitter.svg" alt="Sign up with Twitter"
+                    /></a>
+                    <a href="#"
+                      ><img
+                        src="./images/instagram.svg"
+                        alt="Sign up with Instagram"
+                    /></a>
+                    <a href="#">
+                      <img src="./images/github.svg" alt="Sign up with GitHub"
+                    /></a>
                   </span>
                 </div>
                 <div class="step_move">
-                  <a href="#step2">
+                  <a href="#step1">
                     Backward
+                  </a>
+                  <a href="#step2">
+                    Forward
                   </a>
                   <button type="submit">
                     Create Account
@@ -244,20 +293,12 @@
       </div>
 
       <main>
-        <img src="" alt="Illustrative Image" />
-        <div class="purpose_1">
-          <h1>Daily UI challenge day 1</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-            quasi sapiente! Repellendus odit animi voluptatibus porro,
-            reprehenderit vel dicta vitae error modi fuga recusandae reiciendis
-            earum beatae corrupti. Nesciunt, quidem.
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus,
-            nam?
-          </p>
-        </div>
+        <nav>
+          <ul>
+            <li><a href="#sign_in">Sign In</a></li>
+            <li><a href="#sign_up">Sign Up</a></li>
+          </ul>
+        </nav>
       </main>
       <footer>
         A Challenge from DailyUI by StormieGal | &copy; 2020
